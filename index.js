@@ -10,10 +10,13 @@ function secondBiggestNumber(numbers) {
         } else if(second_biggest_number == undefined || second_biggest_number < item) {
             second_biggest_number = item;
         }
-
-        if(second_biggest_number == undefined)
-            return -1; //Should ideally throw error instead of returning -1. As -1 can also be a number in the array
-        else
-            return second_biggest_number;
     }
+    if(second_biggest_number == undefined)
+        return -1; //Should ideally throw error instead of returning -1. As -1 can also be a number in the array
+    else
+        return second_biggest_number;
 }
+
+const input = [3, -2];
+const result = secondBiggestNumber(input);
+console.log("second biggest number is: " + result);
